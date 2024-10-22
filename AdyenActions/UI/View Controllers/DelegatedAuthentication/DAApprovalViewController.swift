@@ -24,7 +24,7 @@ internal final class DAApprovalViewController: UIViewController {
         let alertController = UIAlertController(
             title: localizedString(.threeds2DAApprovalRemoveAlertTitle, localizationParameters),
             message: localizedString(.threeds2DAApprovalRemoveAlertDescription, localizationParameters),
-            preferredStyle: .alert
+            preferredStyle: .actionSheet
         )
         let removeAction = UIAlertAction(
             title: localizedString(.threeds2DAApprovalRemoveAlertPositiveButton, localizationParameters),
@@ -35,7 +35,7 @@ internal final class DAApprovalViewController: UIViewController {
         )
         let cancelAction = UIAlertAction(
             title: localizedString(.threeds2DAApprovalRemoveAlertNegativeButton, localizationParameters),
-            style: .default,
+            style: .cancel,
             handler: nil
         )
         alertController.addAction(cancelAction)
