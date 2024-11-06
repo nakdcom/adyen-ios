@@ -89,8 +89,7 @@ internal final class DelegatedAuthenticationErrorView: UIView {
             alignment: .center,
             spacing: 8,
             view: self,
-            withBackground: true,
-            scopedInstance: self
+            withBackground: true
         )
         stackView.isLayoutMarginsRelativeArrangement = true
         stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
@@ -100,8 +99,7 @@ internal final class DelegatedAuthenticationErrorView: UIView {
     internal lazy var tileAndSubtitleStackView: UIStackView = .init(
         arrangedSubviews: [image, titleLabel, descriptionLabel],
         spacing: 16,
-        view: self,
-        scopedInstance: self
+        view: self
     )
                     
     // MARK: Buttons
@@ -120,8 +118,7 @@ internal final class DelegatedAuthenticationErrorView: UIView {
         arrangedSubviews: [firstButton],
         distribution: .fillEqually,
         spacing: 5,
-        view: self,
-        scopedInstance: self
+        view: self
     )
     
     // MARK: - Container Views
@@ -134,8 +131,7 @@ internal final class DelegatedAuthenticationErrorView: UIView {
             buttonsStackView
         ],
         spacing: 16,
-        view: self,
-        scopedInstance: self
+        view: self
     )
 
     // MARK: - initializers
