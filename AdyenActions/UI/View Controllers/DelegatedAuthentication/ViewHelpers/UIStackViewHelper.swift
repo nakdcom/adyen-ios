@@ -33,6 +33,7 @@ extension UIStackView {
             subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             self.insertSubview(subView, at: 0)
             subView.layer.cornerRadius = 10.0
+            self.layer.cornerRadius = 10.0
             subView.layer.masksToBounds = true
             subView.clipsToBounds = true
         }
