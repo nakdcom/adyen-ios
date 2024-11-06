@@ -48,6 +48,7 @@ internal final class DelegatedAuthenticationView: UIView {
     internal lazy var titleLabel: UILabel = .init(
         style: style.headerTextStyle,
         accessibilityPostfix: "titleLabel",
+        multiline: true,
         textAlignment: .center,
         scopeInstance: self
     )
