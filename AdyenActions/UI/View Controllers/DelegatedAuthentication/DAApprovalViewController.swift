@@ -24,7 +24,7 @@ internal final class DAApprovalViewController: UIViewController {
         let alertController = UIAlertController(
             title: localizedString(.threeds2DAApprovalRemoveAlertTitle, localizationParameters),
             message: localizedString(.threeds2DAApprovalRemoveAlertDescription, localizationParameters),
-            preferredStyle: .actionSheet
+            preferredStyle: .alert
         )
         let removeAction = UIAlertAction(
             title: localizedString(.threeds2DAApprovalRemoveAlertPositiveButton, localizationParameters),
@@ -170,15 +170,12 @@ internal final class DAApprovalViewController: UIViewController {
 
 @available(iOS 16.0, *)
 extension DAApprovalViewController: DelegatedAuthenticationViewDelegate {
-    internal func removeCredential() {
-        present(removeCredentialAlert, animated: true)
-    }
-    
     internal func firstButtonTapped() {
         useBiometricsHandler()
     }
     
     internal func secondButtonTapped() {
+        actionSheet.popoverPresentationController?.sourceView = approvalView.secondButton
         present(actionSheet, animated: true)
     }
 }

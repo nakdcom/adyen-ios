@@ -230,6 +230,7 @@ extension DAErrorViewController: DelegatedAuthenticationErrorViewDelegate {
         guard let resetCredentialAlert else {
             return
         }
+        resetCredentialAlert.popoverPresentationController?.sourceView = errorView.troubleshootingButton
         present(resetCredentialAlert, animated: true)
     }
     
