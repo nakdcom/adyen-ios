@@ -173,13 +173,18 @@ extension ApplePayComponent {
 extension ApplePayPaymentMethod {
 
     internal var supportedNetworks: [PKPaymentNetwork] {
-        return [.discover]
-//        var networks = PKPaymentRequest.availableNetworks()
-//        if let brands {
-//            let brandsSet = Set(brands)
-//            networks = networks.filter { brandsSet.contains($0.txVariantName) }
-//        }
-//        return networks
+        var networks = PKPaymentRequest.availableNetworks()
+        if let brands {
+            let brandsSet = Set(brands)
+            print("Adyen log networks:", networks)
+            networks = networks.filter { brandsSet.contains($0.txVariantName) }
+            print("Adyen log brands:", brandsSet)
+            print("Adyen log networks:", networks)
+        } else {
+            print("Adyen log no brands")
+        }
+        
+        return networks
     }
 
 }
