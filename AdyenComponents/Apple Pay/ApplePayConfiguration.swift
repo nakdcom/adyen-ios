@@ -143,7 +143,7 @@ extension ApplePayComponent {
         internal mutating func paymentRequest(with supportedNetworks: [PKPaymentNetwork]) -> PKPaymentRequest {
             // create the request from config properties if using old init
             let paymentRequest = paymentRequest ?? createPaymentRequest()
-            paymentRequest.supportedNetworks = supportedNetworks
+//            paymentRequest.supportedNetworks = supportedNetworks
             self.paymentRequest = paymentRequest
             return paymentRequest
         }
