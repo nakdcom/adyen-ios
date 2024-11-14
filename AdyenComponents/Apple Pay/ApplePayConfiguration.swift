@@ -173,12 +173,13 @@ extension ApplePayComponent {
 extension ApplePayPaymentMethod {
 
     internal var supportedNetworks: [PKPaymentNetwork] {
-        var networks = PKPaymentRequest.availableNetworks()
-        if let brands {
-            let brandsSet = Set(brands)
-            networks = networks.filter { brandsSet.contains($0.txVariantName) }
-        }
-        return networks
+        return [.discover]
+//        var networks = PKPaymentRequest.availableNetworks()
+//        if let brands {
+//            let brandsSet = Set(brands)
+//            networks = networks.filter { brandsSet.contains($0.txVariantName) }
+//        }
+//        return networks
     }
 
 }
